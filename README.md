@@ -1,4 +1,4 @@
-# Estos son los archivos iniciales del proyecto
+<!-- # Estos son los archivos iniciales del proyecto
 
 ## Este proyecto corresponde al tutorial de youtube: 
 
@@ -8,22 +8,18 @@
 
 ```git clone https://github.com/mundo-python/social_project.git```
 
-
 2. Crea un ambiente virtual 
 
 ```python -m venv socialenv```
-
 
 3. Instala las dependencias/librerias en requirements.txt
 
 ```pip install -r requirements.txt```
 
-
 4. Ejecuta las migraciones.
 
 ```python manage.py makemigrations```
 ```python manage.py migrate```
-
 
 5. Crea un superusuario.
 
@@ -31,4 +27,9 @@
 
 6. Corre el servidor.
 
-```python manage.py runserver```
+```python manage.py runserver``` -->
+
+<!-- Username (leave blank to use 'empreendedor'): fagno
+Email address:    
+Password:123
+Password (again):123 -->
