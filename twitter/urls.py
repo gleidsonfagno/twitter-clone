@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -10,5 +12,10 @@ urlpatterns = [
 	path('logout/', LogoutView.as_view(), name='logout'),
     path("delete/<int:post_id>/", views.delete, name="delete"),
     path('profile/', views.profile, name='profile'),
-    path('editar/', views.editar, name='editar')
-]
+    path('editar/', views.editar, name='editar'),
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# if settings.DEBUG:
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
