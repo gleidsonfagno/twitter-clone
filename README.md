@@ -1,36 +1,48 @@
-<!-- # Estos son los archivos iniciales del proyecto
+# twitter-clone
 
-## Este proyecto corresponde al tutorial de youtube: 
-
-#### Para utilizarlo/configurarlo:
+## Para utilizarlo/configurarlo
 
 1. Clona el repositorio o descargalo como zip.
 
 ```git clone https://github.com/mundo-python/social_project.git```
 
-2. Crea un ambiente virtual 
+2. Crea un ambiente virtual
 
-```python -m venv socialenv```
+```bash
+python -m venv socialenv
+```
 
 3. Instala las dependencias/librerias en requirements.txt
 
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
-4. Ejecuta las migraciones.
+1. Ejecuta las migraciones.
 
-```python manage.py makemigrations```
-```python manage.py migrate```
+```bash
+python manage.py makemigrations
+```
+
+```bash
+python manage.py migrate
+```
 
 5. Crea un superusuario.
 
-```python manage.py createsuperuser```
+```bash
+python manage.py createsuperuser
+```
 
 6. Corre el servidor.
 
-```python manage.py runserver``` -->
+```bash
+python manage.py runserver
+```
 
-<!-- Username (leave blank to use 'empreendedor'): fagno
+```bash
+Username (leave blank to use 'empreendedor'): fagno
 Email address:    
 Password:123
 Password (again):123 
-48.44-->
+```
