@@ -65,3 +65,11 @@ def follow(request, username):
 	rel = Relationship(from_user=current_user, to_user=to_user_id)
 	rel.save()
 	return redirect('home')
+
+def unfollow(request, username):
+	current_user = request.user
+	to_user = User.objects.get(username=username)
+	to_user_id = to_user.id
+	rel = Relationship.objects.get(from_user=current_user.id, to_user=to_user_id)
+	rel.delete()
+	return redirect('home')
