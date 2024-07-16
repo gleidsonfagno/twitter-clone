@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Profile, Post, Relationship
 from .forms import UserRegisterForm, PostForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     posts = Post.objects.all()
@@ -42,6 +43,7 @@ def profile(request, username):
     context = {'user':user, 'posts':posts}
     return render(request, 'twitter/profile.html', context)
 
+@login_required
 def editar(request):
 	if request.method == 'POST':
 		u_form = UserUpdateForm(request.POST, instance=request.user)
