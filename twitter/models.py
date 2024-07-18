@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 class Profile(models.Model):
+	id = models.BigAutoField(primary_key=True)
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	bio = models.CharField(default='Hola, twitter', max_length=100)
 	image = models.ImageField(default='default.png')
@@ -23,6 +24,7 @@ class Profile(models.Model):
 
 
 class Post(models.Model):
+	id = models.BigAutoField(primary_key=True)
 	timestamp = models.DateTimeField(default=timezone.now)
 	content = models.TextField()
 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
@@ -34,6 +36,7 @@ class Post(models.Model):
 		return self.content
 
 class Relationship(models.Model):
+	id = models.BigAutoField(primary_key=True)
 	from_user = models.ForeignKey(User, related_name='relationships', on_delete=models.CASCADE)
 	to_user = models.ForeignKey(User, related_name='related_to', on_delete=models.CASCADE)
 
