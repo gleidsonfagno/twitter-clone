@@ -130,8 +130,10 @@ CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-production-b25d.up.railway.app']
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Defina o diretório onde estão os arquivos estáticos do projeto (twitter/static)
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'twitter/static'),
 ]
 
 
