@@ -137,13 +137,12 @@ CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-production-b25d.up.railway.app']
 # ]
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Diretório para arquivos estáticos coletados
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Diretório onde arquivos estáticos coletados serão armazenados
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'twitter/static'),  # Diretório para arquivos estáticos específicos do app
-    os.path.join(BASE_DIR, 'static'),  # Diretório para arquivos estáticos adicionais
+    # Remova a entrada que está apontando para o STATIC_ROOT aqui
 ]
-
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

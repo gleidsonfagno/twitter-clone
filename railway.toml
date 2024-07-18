@@ -1,5 +1,6 @@
 [build]
 builder = "NIXPACKS"
+command = "python manage.py collectstatic --noinput && gunicorn social_project.wsgi"
 
 [deploy]
 runtime = "V2"
@@ -7,3 +8,8 @@ numReplicas = 1
 sleepApplication = false
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+start = "gunicorn social_project.wsgi:application --bind 0.0.0.0:$PORT"
+
+[[statics]]
+  guest_path = "/code/staticfiles"
+  url_prefix = "/static/"
