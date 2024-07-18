@@ -49,4 +49,3 @@ Password (again):123
 
  fly deploy --wait-timeout 10m
  git commit -m "ajustando as keys"
- 
