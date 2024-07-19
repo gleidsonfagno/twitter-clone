@@ -1,5 +1,5 @@
-# See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
 
+name: Fly Deploy
 on:
   push:
     branches:
@@ -20,7 +20,7 @@ jobs:
         uses: superfly/flyctl-actions/setup-flyctl@v1
 
       - name: Verify Flyctl version
-        run: flyctl --version
+        run: flyctl version
 
       - name: Deploy to Fly.io
         run: flyctl deploy --remote-only
