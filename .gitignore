@@ -1,4 +1,4 @@
-fly.toml
+# fly.toml
 # Django #
 *.log
 *.pot

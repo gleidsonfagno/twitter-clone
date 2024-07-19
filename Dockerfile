@@ -16,6 +16,9 @@ RUN set -ex && \
     rm -rf /root/.cache/
 COPY . /code
 
+ENV SECRET_KEY "IF9bDcjLTfWTGKZbauxC4kZz7CJEllYKtXhfLlXi0KUTSyuSaQ"
+RUN python manage.py collectstatic --noinput
+
 EXPOSE 8000
 
 CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "social_project.wsgi"]
