@@ -1,48 +1,35 @@
-# twitter-clone
+# Twitter Clone
 
-## Para utilizarlo/configurarlo
+<h1 align="center"> Twitter Clone </h1>
 
-1. Clona el repositorio o descargalo como zip.
+## 🚀 Tecnologias
 
-```git clone https://github.com/mundo-python/social_project.git```
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-2. Crea un ambiente virtual
+- **Python 3.x**:
+- **Django**:
+- **PostgreSQL**:
+- **Docker**:
+- **Git e GitHub**:
 
-```bash
-python -m venv socialenv
-```
+## 💻 Projeto
 
-3. Instala las dependencias/librerias en requirements.txt
+Este é um clone do Twitter desenvolvido com Django. O projeto inclui as seguintes funcionalidades:
 
-```bash
-pip install -r requirements.txt
-```
+- Registro e autenticação de usuários.
+- Postagens e feed de atualizações.
+- Interface administrativa para gerenciamento de usuários e postagens.
 
-1. Ejecuta las migraciones.
+![Imagem do Projeto](src/img/projeto.png)
 
-```bash
-python manage.py makemigrationsKO
-```
+- [Acesse o projeto online](https://clone-twitter.fly.dev/)
+- [Meu portfólio](https://www.gleidsonfagno.com.br/)
 
-```bash
-python manage.py migrate
-```
+## 📋 Como Utilizar
 
-5. Crea un superusuario.
+Para configurar e executar o projeto localmente, siga estas etapas:
 
-```bash
-python manage.py createsuperuser
-```
+1. **Clone o repositório ou faça o download como ZIP:**
 
-6. Corre el servidor.
-
-```bash
-python manage.py runserver
-```
-
-```bash
-Username (leave blank to use 'empreendedor'): fagno
-Email address:    
-Password:123
-Password (again):123 
-```
+   ```bash
+   git clone https://github.com/gleidsonfagno/twitter-clone.git
